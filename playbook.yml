@@ -15,3 +15,6 @@
     - name: zsh
       homebrew:
         name: zsh
+    - name: direnv
+      homebrew:
+        name: direnv
