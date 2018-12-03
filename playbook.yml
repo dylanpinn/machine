@@ -5,3 +5,10 @@
     - name: 1password
       homebrew_cask:
         name: 1password
+    - block:
+      - name: rcm tap
+        homebrew_tap:
+          name: thoughtbot/formulae
+      - name: rcm install
+        homebrew:
+          name: rcm
