@@ -12,3 +12,6 @@
       - name: rcm install
         homebrew:
           name: rcm
+    - name: zsh
+      homebrew:
+        name: zsh
