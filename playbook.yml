@@ -1,0 +1,7 @@
+---
+- hosts: local
+  connection: local
+  tasks:
+    - name: 1password
+      homebrew_cask:
+        name: 1password
