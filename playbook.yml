@@ -18,3 +18,7 @@
     - name: direnv
       homebrew:
         name: direnv
+    - name: yarn
+      homebrew:
+        name: yarn
+        install_options: without-node
