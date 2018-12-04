@@ -37,3 +37,10 @@
     - name: ag
       homebrew:
         name: ag
+    - block:
+      - name: ruby-build
+        homebrew:
+          name: ruby-build
+      - name: rbenv
+        homebrew:
+          name: rbenv
