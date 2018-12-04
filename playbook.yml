@@ -25,3 +25,6 @@
     - name: tmux
       homebrew:
         name: tmux
+    - name: htop
+      homebrew:
+        name: htop
