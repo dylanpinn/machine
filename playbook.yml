@@ -22,3 +22,6 @@
       homebrew:
         name: yarn
         install_options: without-node
+    - name: tmux
+      homebrew:
+        name: tmux
