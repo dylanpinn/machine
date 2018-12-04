@@ -34,3 +34,6 @@
     - name: dash
       homebrew_cask:
         name: dash
+    - name: ag
+      homebrew:
+        name: ag
