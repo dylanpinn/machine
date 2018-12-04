@@ -31,3 +31,6 @@
     - name: vim
       homebrew:
         name: vim
+    - name: dash
+      homebrew_cask:
+        name: dash
