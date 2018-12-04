@@ -28,3 +28,6 @@
     - name: htop
       homebrew:
         name: htop
+    - name: vim
+      homebrew:
+        name: vim
