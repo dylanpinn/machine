@@ -44,3 +44,6 @@
       - name: rbenv
         homebrew:
           name: rbenv
+    - name: imageoptim
+      homebrew_cask:
+        name: imageoptim
