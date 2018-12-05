@@ -47,3 +47,9 @@
     - name: imageoptim
       homebrew_cask:
         name: imageoptim
+    - name: git
+      homebrew:
+        name: git
+    - name: git-lfs
+      homebrew:
+        name: git-lfs
