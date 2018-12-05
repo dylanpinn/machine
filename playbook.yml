@@ -53,3 +53,10 @@
     - name: git-lfs
       homebrew:
         name: git-lfs
+    - block:
+      - name: cask versions tap
+        homebrew_tap:
+          name: homebrew/cask-versions
+      - name: safari technology preview
+        homebrew_cask:
+          name: safari-technology-preview
