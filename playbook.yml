@@ -66,3 +66,6 @@
     - name: Firefox Developer Edition
       homebrew_cask:
         name: firefox-developer-edition
+    - name: wget
+      homebrew:
+        name: wget
