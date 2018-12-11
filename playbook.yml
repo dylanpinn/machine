@@ -69,3 +69,6 @@
     - name: wget
       homebrew:
         name: wget
+    - name: Google Chrome Canary
+      homebrew_cask:
+        name: google-chrome-canary
