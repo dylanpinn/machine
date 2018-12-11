@@ -72,3 +72,6 @@
     - name: Google Chrome Canary
       homebrew_cask:
         name: google-chrome-canary
+    - name: Docker
+      homebrew_cask:
+        name: docker
