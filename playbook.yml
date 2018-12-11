@@ -75,3 +75,6 @@
     - name: Docker
       homebrew_cask:
         name: docker
+    - name: pyenv
+      homebrew:
+        name: pyenv
