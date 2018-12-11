@@ -63,3 +63,6 @@
       - name: safari technology preview
         homebrew_cask:
           name: safari-technology-preview
+    - name: Firefox Developer Edition
+      homebrew_cask:
+        name: firefox-developer-edition
