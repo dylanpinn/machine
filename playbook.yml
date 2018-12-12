@@ -86,3 +86,7 @@
       pip:
         name: aws-sam-cli
         state: latest
+    - name: Insomnia REST client
+      homebrew_cask:
+        name: insomnia
+        state: present
