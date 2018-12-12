@@ -82,3 +82,7 @@
       pip:
         name: awscli
         state: latest
+    - name: AWS SAM CLI
+      pip:
+        name: aws-sam-cli
+        state: latest
