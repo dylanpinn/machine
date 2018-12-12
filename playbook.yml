@@ -78,3 +78,7 @@
     - name: pyenv
       homebrew:
         name: pyenv
+    - name: AWS CLI
+      pip:
+        name: awscli
+        state: latest
