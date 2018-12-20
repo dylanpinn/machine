@@ -90,3 +90,7 @@
       homebrew_cask:
         name: insomnia
         state: present
+    - name: Remote Desktop Client
+      homebrew_cask:
+        name: microsoft-remote-desktop-beta
+        state: present
