@@ -94,3 +94,7 @@
       homebrew_cask:
         name: microsoft-remote-desktop-beta
         state: present
+    - name: MySQL Client
+      homebrew_cask:
+        name: sequel-pro-nightly
+        state: present
