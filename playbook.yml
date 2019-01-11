@@ -1,6 +1,11 @@
 ---
 - hosts: local
   connection: local
+
+  roles:
+    - role: geerlingguy.homebrew
+    - role: geerlingguy.mas
+
   tasks:
     - name: 1password
       homebrew_cask:
