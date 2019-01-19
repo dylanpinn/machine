@@ -106,3 +106,5 @@
       homebrew_cask:
         name: sequel-pro-nightly
         state: present
+    - name: bat
+      homebrew: name=bat state=present
