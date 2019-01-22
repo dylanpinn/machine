@@ -108,3 +108,7 @@
         state: present
     - name: bat
       homebrew: name=bat state=present
+    - name: ansible
+      pip:
+        name: ansible
+        state: latest

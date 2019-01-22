@@ -2,4 +2,4 @@
 
 set -e
 
-brew install ansible
+pip install ansible
