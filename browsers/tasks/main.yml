@@ -1,2 +1,4 @@
 ---
-# tasks file for browsers
+
+- include: darwin.yml
+  when: ansible_os_family == 'Darwin'
