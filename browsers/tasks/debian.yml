@@ -7,3 +7,14 @@
 - name: Add Ubuntu Make.
   apt:
     name: ubuntu-make
+
+- name: Check if Firefox Developer Edition has been installed.
+  stat:
+    path: ~/.local/share/umake/web/firefox-dev
+  register: firefox_dev
+
+- name: Add Firefox Developer Edition.
+  command: umake web firefox-dev
+  args:
+    creates: ~/.local/share/umake/bin/firefox-develop
+  when: firefox_dev.stat.exists == False
