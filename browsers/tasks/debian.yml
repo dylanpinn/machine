@@ -20,6 +20,6 @@
     creates: ~/.local/share/umake/bin/firefox-develop
   when: firefox_dev.stat.exists == False
 
-- name: Add Google Chrome.
+- name: Add Google Chrome Stable.
   apt:
     deb: https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
