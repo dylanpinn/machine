@@ -8,6 +8,7 @@
   apt:
     name: ubuntu-make
 
+# Browsers
 - name: Check if Firefox Developer Edition has been installed.
   stat:
     path: ~/.local/share/umake/web/firefox-dev
@@ -18,3 +19,7 @@
   args:
     creates: ~/.local/share/umake/bin/firefox-develop
   when: firefox_dev.stat.exists == False
+
+- name: Add Google Chrome.
+  apt:
+    deb: https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
