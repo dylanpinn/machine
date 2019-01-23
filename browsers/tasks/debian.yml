@@ -1,0 +1,9 @@
+---
+# Setup
+- name: Add Ubuntu Make repository.
+  apt_repository:
+    repo: ppa:ubuntu-desktop/ubuntu-make
+
+- name: Add Ubuntu Make.
+  apt:
+    name: ubuntu-make
