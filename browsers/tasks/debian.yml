@@ -1,5 +1,13 @@
 ---
-# Setup
+# Firefox Stable
+- name: Add Firefox Stable.
+  become: yes
+  apt:
+    name: firefox
+    update_cache: yes
+    cache_valid_time: 3600
+
+# Firefox Developer Edition
 - name: Add Ubuntu Make repository.
   apt_repository:
     repo: ppa:ubuntu-desktop/ubuntu-make
@@ -8,7 +16,6 @@
   apt:
     name: ubuntu-make
 
-# Browsers
 - name: Check if Firefox Developer Edition has been installed.
   stat:
     path: ~/.local/share/umake/web/firefox-dev
@@ -20,13 +27,9 @@
     creates: ~/.local/share/umake/bin/firefox-develop
   when: firefox_dev.stat.exists == False
 
+# Google Chrome Stable
 - name: Add Google Chrome Stable.
   apt:
     deb: https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 
-- name: Add Firefox Stable.
-  become: yes
-  apt:
-    name: firefox
-    update_cache: yes
-    cache_valid_time: 3600
+# Google Chrome Beta
