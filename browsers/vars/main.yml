@@ -1,2 +1,6 @@
 ---
 # vars file for browsers
+
+debian:
+  chrome_stable:
+    apt_file: /etc/apt/sources.list.d/google-chrome.list
