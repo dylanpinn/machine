@@ -4,15 +4,25 @@
   homebrew_tap:
     name: homebrew/cask-versions
 
-# Browsers
-- name: Add Safari Technology Preview.
+# Firefox Stable
+- name: Add Firefox Stable.
   homebrew_cask:
-    name: safari-technology-preview
-
+    name: firefox
+# Firefox Developer Edition
 - name: Add Firefox Developer Edition.
   homebrew_cask:
     name: firefox-developer-edition
 
+# Safari Technology Preview
+- name: Add Safari Technology Preview.
+  homebrew_cask:
+    name: safari-technology-preview
+
+# Google Chrome Stable
+- name: Add Google Chrome Stable.
+  homebrew_cask:
+    name: google-chrome
+# Google Chrome Canary
 - name: Add Google Chrome Canary.
   homebrew_cask:
     name: google-chrome-canary
