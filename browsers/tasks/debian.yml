@@ -9,10 +9,12 @@
 
 # Firefox Developer Edition
 - name: Add Ubuntu Make repository.
+  become: yes
   apt_repository:
     repo: ppa:ubuntu-desktop/ubuntu-make
 
 - name: Add Ubuntu Make.
+  become: yes
   apt:
     name: ubuntu-make
 
@@ -34,18 +36,25 @@
   ignore_errors: True
 
 - name: Add Google Chrome key
+  become: yes
   shell: wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add -
   when: google_apt_exists.rc == 1
 
 - name: Add Google Chrome repo
-  copy: content="deb http://dl.google.com/linux/chrome/deb/ stable main" dest={{apt_file}} owner=root group=root mode=644
+  become: yes
+  copy: content="deb http://dl.google.com/linux/chrome/deb/ stable main" dest={{debian.chrome_stable.apt_file}} owner=root group=root mode=644
   when: google_apt_exists.rc == 1
 
 - name: Update apt cache
+  become: yes
   apt: update_cache=yes
   when: google_apt_exists.rc == 1
 
-- name: Install Google Chrome
-  apt: pkg=google-chrome-stable state=installed
+- name: Install Google Chrome Stable.
+  become: yes
+  apt: pkg=google-chrome-stable state=present
 
 # Google Chrome Beta
+- name: Install Google Chrome Beta.
+  become: yes
+  apt: pkg=google-chrome-beta state=present
