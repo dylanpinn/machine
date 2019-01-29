@@ -7,11 +7,20 @@ galaxy_info:
   min_ansible_version: 2.4
 
   platforms:
-    - name: macos
+    - name: macOS
       versions:
         - Mojave
+    - name: Ubuntu
+      versions:
+        - bionic
+        - cosmic
 
   galaxy_tags:
     - browsers
 
-dependencies: []
+dependencies:
+  - homebrew_cask
+  - homebrew
+  - homebrew_tap
+  - apt
+  - apt_repository
