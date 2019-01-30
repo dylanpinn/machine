@@ -18,9 +18,4 @@ galaxy_info:
   galaxy_tags:
     - browsers
 
-dependencies:
-  - homebrew_cask
-  - homebrew
-  - homebrew_tap
-  - apt
-  - apt_repository
+dependencies: []
