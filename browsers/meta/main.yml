@@ -1,0 +1,21 @@
+galaxy_info:
+  author: Dylan Pinn
+  description: Install browsers required.
+
+  license: BSD
+
+  min_ansible_version: 2.4
+
+  platforms:
+    - name: macOS
+      versions:
+        - Mojave
+    - name: Ubuntu
+      versions:
+        - bionic
+        - cosmic
+
+  galaxy_tags:
+    - browsers
+
+dependencies: []
