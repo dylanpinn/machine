@@ -1,0 +1,19 @@
+---
+
+- name: Linuxbrew dependencies
+  become: yes
+  apt: name={{ item }} state=present update_cache=yes cache_valid_time=3600
+  with_items:
+    - build-essential
+    - curl
+    - file
+    - git
+
+- name: Check if Linuxbrew has been installed
+  stat:
+    path: /home/linuxbrew/.linuxbrew
+  register: linux_brew
+
+- name: Install Linuxbrew
+  shell: sh -c "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install.sh)"
+  when: linux_brew.stat.exists == False
