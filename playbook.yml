@@ -9,6 +9,7 @@
     - role: geerlingguy.homebrew
     - role: geerlingguy.mas
     - role: browsers
+    - role: databases
 
   tasks:
     - name: 1password
