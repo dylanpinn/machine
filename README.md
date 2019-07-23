@@ -4,14 +4,14 @@ Setup a new development machine using Ansible quickly and easily.
 
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
 ### Prerequisites
 
-What things you need to install the software and how to install them
+To setup a new machine `ansible` is required, easiest way to install `ansible` is with [`homebrew`](https://brew.sh):
 
-```
-Give examples
+```bash
+brew install ansible
 ```
 
 ### Installing
