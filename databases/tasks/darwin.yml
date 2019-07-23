@@ -1,0 +1,5 @@
+---
+# MariaDB
+- name: Add MariaDB.
+  homebrew: 
+    name: mariadb

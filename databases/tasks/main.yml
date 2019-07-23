@@ -1,2 +1,7 @@
 ---
-# tasks file for databases
+
+- include: darwin.yml
+  when: ansible_os_family == 'Darwin'
+
+- include: debian.yml
+  when: ansible_os_family == 'Debian'
