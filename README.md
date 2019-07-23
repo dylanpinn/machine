@@ -8,10 +8,10 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Prerequisites
 
-To setup a new machine `ansible` is required, easiest way to install `ansible` is with [`homebrew`](https://brew.sh):
+To setup a new machine `ansible` is required, easiest way to install `ansible` is with `pip`, Python's built-in package manager:
 
 ```bash
-brew install ansible
+./install-ansible.sh
 ```
 
 ### Installing
