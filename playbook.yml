@@ -23,12 +23,14 @@
       homebrew_tap:
         name: buo/cask-upgrade
     - name: rcm
+      when: ansible_os_family == 'Debian'
       include_role:
         name: karlmdavis.rcm-dotfiles
       vars:
         rcm_user: dylan
         rcm_repos:
           - repo: 'https://github.com/dylanpinn/dotfiles'
+            # TODO: Get this working for MacOS.
             dest: '/home/dylan/.dotfiles'
     - name: zsh
       homebrew:
