@@ -19,13 +19,14 @@ To setup a new machine `ansible` is required, easiest way to install `ansible` i
 To install on MacOS
 
 ```bash
-ansible-galaxy install -r requirements.yml
+ansible-galaxy install -r requirements.yml -r requirements-darwin.yml
 ansible-playbook playbook.yml -i hosts
 ```
 
 To install on Linux
 
 ```bash
+ansible-galaxy install -r requirements.yml
 ansible-playbook playbook.yml -i hosts -b -K
 ```
 

@@ -3,27 +3,33 @@
   connection: local
 
   vars_files:
-    - default.config.yml
+    - "vars/common.yml"
+    - [ "vars/{{ ansible_facts['os_family'] }}.yml", "vars/os_defaults.yml" ]
 
   roles:
     - role: geerlingguy.homebrew
+      when: ansible_os_family == 'Darwin'
     - role: geerlingguy.mas
+      when: ansible_os_family == 'Darwin'
     - role: browsers
 
   tasks:
     - name: 1password
+      when: ansible_os_family == 'Darwin'
       homebrew_cask:
         name: 1password
     - name: Homebrew Cask upgrade.
+      when: ansible_os_family == 'Darwin'
       homebrew_tap:
         name: buo/cask-upgrade
-    - block:
-      - name: rcm tap
-        homebrew_tap:
-          name: thoughtbot/formulae
-      - name: rcm install
-        homebrew:
-          name: rcm
+    - name: rcm
+      include_role:
+        name: karlmdavis.rcm-dotfiles
+      vars:
+        rcm_user: dylan
+        rcm_repos:
+          - repo: 'https://github.com/dylanpinn/dotfiles'
+            dest: '/home/dylan/.dotfiles'
     - name: zsh
       homebrew:
         name: zsh
@@ -31,9 +37,16 @@
       homebrew:
         name: direnv
     - name: yarn
-      homebrew:
-        name: yarn
-        install_options: without-node
+      block:
+      - name: yarn debian
+        when: ansible_os_family == 'Debian'
+        homebrew:
+          name: yarn
+      - name: yarn macos
+        when: ansible_os_family == 'Darwin'
+        homebrew:
+          name: yarn
+          install_options: without-node
     - name: tmux
       homebrew:
         name: tmux
@@ -44,6 +57,7 @@
       homebrew:
         name: vim
     - name: dash
+      when: ansible_os_family == 'Darwin'
       homebrew_cask:
         name: dash
     - name: ag
@@ -57,6 +71,7 @@
         homebrew:
           name: rbenv
     - name: imageoptim
+      when: ansible_os_family == 'Darwin'
       homebrew_cask:
         name: imageoptim
     - name: git
@@ -69,6 +84,7 @@
       homebrew:
         name: wget
     - name: Docker
+      when: ansible_os_family == 'Darwin'
       homebrew_cask:
         name: docker
     - name: pyenv
@@ -83,14 +99,17 @@
         name: aws-sam-cli
         state: latest
     - name: Insomnia REST client
+      when: ansible_os_family == 'Darwin'
       homebrew_cask:
         name: insomnia
         state: present
     - name: Remote Desktop Client
+      when: ansible_os_family == 'Darwin'
       homebrew_cask:
         name: microsoft-remote-desktop-beta
         state: present
     - name: MySQL Client
+      when: ansible_os_family == 'Darwin'
       homebrew_cask:
         name: sequel-pro-nightly
         state: present
