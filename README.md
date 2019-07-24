@@ -16,21 +16,18 @@ To setup a new machine `ansible` is required, easiest way to install `ansible` i
 
 ### Installing
 
-A step by step series of examples that tell you how to get a development env running
+To install on MacOS
 
-Say what the step will be
-
-```
-Give the example
-```
-
-And repeat
-
-```
-until finished
+```bash
+ansible-galaxy install -r requirements.yml
+ansible-playbook playbook.yml -i hosts
 ```
 
-End with an example of getting some data out of the system or using it for a little demo
+To install on Linux
+
+```bash
+ansible-playbook playbook.yml -i hosts -b -K
+```
 
 ## Running the tests
 
@@ -52,15 +49,9 @@ Explain what these tests test and why
 Give an example
 ```
 
-## Deployment
-
-Add additional notes about how to deploy this on a live system
-
 ## Built With
 
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
+* [Ansible](https://docs.ansible.com/) - Configuration management
 
 ## Contributing
 
