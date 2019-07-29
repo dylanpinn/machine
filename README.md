@@ -20,14 +20,14 @@ To install on MacOS
 
 ```bash
 ansible-galaxy install -r requirements.yml -r requirements-darwin.yml
-ansible-playbook playbook.yml -i hosts
+ansible-playbook playbook.yml -i hosts -K
 ```
 
 To install on Linux
 
 ```bash
 ansible-galaxy install -r requirements.yml
-ansible-playbook playbook.yml -i hosts -b -K
+ansible-playbook playbook.yml -i hosts -bK
 ```
 
 ## Running the tests
