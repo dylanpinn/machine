@@ -92,6 +92,9 @@
     - name: pyenv
       homebrew:
         name: pyenv
+    - name: pyenv-virtualenv
+      homebrew:
+        name: pyenv-virtualenv
     - name: AWS CLI
       pip:
         name: awscli
